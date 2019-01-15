@@ -58,6 +58,8 @@ User = namedtuple_with_defaults(
                    'liked',
                    'topicCreated',
                    'topicSubscribed',
+                   'blocking',
+                   'isCancelled',
 
                    'groupId',
                    'groupVersion',

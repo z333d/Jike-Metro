@@ -33,6 +33,7 @@ PUBLIC_FIELDS = [
     'isFeatured',
     # item interaction info
     'likeCount',
+    'shareCount',
     'likeIcon',
     'likeInfo',
     'commentCount',
@@ -52,6 +53,8 @@ OfficialMessage = namedtuple_with_defaults(
                list(set(PUBLIC_FIELDS + [
                    'abstract',
                    'video',
+                   'attachedComments',
+                   'topComment',
                ])))
 )
 
@@ -61,6 +64,9 @@ OriginalPost = namedtuple_with_defaults(
                list(set(PUBLIC_FIELDS + [
                    'messageId',
                    'poi',
+                   'attachedComments',
+                   'topComment',
+                   'readTrackInfo',
                ])))
 )
 
@@ -131,5 +137,7 @@ Comment = namedtuple_with_defaults(
                    'targetId',
                    'targetType',
                    'threadId',
+                   'hideable',
+                   'deletable',
                ])))
 )
